@@ -5,7 +5,7 @@ const Item = ({ product }) => {
   return (
     <div className="item" style={{ marginBottom: '60px'}}>
       <h3>{product.name}</h3>
-      {/* Asegúrate de usar product.imgURL en lugar de product.image */}
+      {}
       <img src={product.imgURL} alt={product.name} style={{ width: '450px', height: '300px' }} />
       <p>Precio: ${product.price}</p>
       <Link to={`/item/${product.id}`} className="btn btn-success">Ver detalles</Link>

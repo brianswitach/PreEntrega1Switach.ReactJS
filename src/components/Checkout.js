@@ -1,8 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { CartContext } from '../context/CartContext';
-import { collection, addDoc } from 'firebase/firestore'; // Importaciones necesarias para Firestore
-import db from '../firebase/firebaseConfig'; // Asegúrate de que db es la instancia de Firestore
-import CartSummary from './CartSummary'; // Importa CartSummary
+import { collection, addDoc } from 'firebase/firestore'; 
+import db from '../firebase/firebaseConfig'; 
+import CartSummary from './CartSummary'; 
 
 const Checkout = () => {
   const { state, dispatch } = useContext(CartContext);
@@ -39,7 +39,7 @@ const Checkout = () => {
 
   return (
     <div>
-      <CartSummary /> {/* Renderiza el resumen del carrito */}
+      <CartSummary /> {}
       {!orderPlaced ? (
         <form onSubmit={(e) => e.preventDefault()}>
           <input type="text" placeholder="Nombre" value={name} onChange={e => setName(e.target.value)} />
