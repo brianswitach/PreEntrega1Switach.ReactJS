@@ -1,31 +1,23 @@
+// NavBar.js
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import CartWidget from './CartWidget';
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <Link className="navbar-brand" to="/">TiendaProyecto</Link>
-      <div className="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul className="navbar-nav mr-auto">
-          <li className="nav-item active">
-            <Link className="nav-link" to="/">Inicio</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/category/categoria1">Categoría 1</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/category/categoria2">Categoría 2</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/category/categoria3">Categoría 3</Link>
-          </li>
-        </ul>
-        <CartWidget />
+    <nav className="navbar" style={{ backgroundColor: '#004d99', padding: '10px 20px' }}>
+      <Link className="navbar-brand" to="/" style={{ color: '#ffffff', marginRight: '20px' }}>Car Market</Link>
+      <div className="navbar-nav" style={{ flexGrow: 1 }}>
+        <Link className="nav-item nav-link" to="/category/autos" style={{ color: '#ffffff', margin: '0 10px' }}>Autos</Link>
+        <Link className="nav-item nav-link" to="/category/camionetas" style={{ color: '#ffffff', margin: '0 10px' }}>Camionetas</Link>
+        <div style={{ position: 'absolute', right: 20 }}>
+
+          <CartWidget />
+        </div>
       </div>
     </nav>
   );
-}
+};
 
 export default NavBar;
