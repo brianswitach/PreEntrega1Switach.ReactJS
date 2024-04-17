@@ -17,6 +17,6 @@
 - Font Awesome: Biblioteca de iconos vectoriales y herramientas de diseño.
   
 # Instalación
-- Clona este repositorio: git clone https://github.com/tu-usuario/car-market-app.git
+- Clona este repositorio: git clone https://github.com/brianswitach/PreEntrega2Switach.ReactJS
 - Instala las dependencias: npm install
 - Inicia la aplicación: npm start
